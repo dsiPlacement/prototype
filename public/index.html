@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>Admin Dashboard | Placementcell</title>
-    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="../bower_components/semantic/dist/semantic.min.js"></script>
-    <script type="text/javascript" src="js/adminDashboard.js"></script>
-    <link rel="stylesheet" href="../bower_components/semantic/dist/semantic.min.css" />
-    <link rel="stylesheet" href="css/dashboard.css" />
-    <script src="bower_components/tinymce/tinymce.min.js"></script>
 
-    <script type="text/javascript" src="../bower_components/angular-route/angular-route.min.js"></script>
+    <!-- standard static js and css -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/semantic/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="bower_components/tinymce/tinymce.min.js"></script>
+    <link rel="stylesheet" href="bower_components/semantic/dist/semantic.min.css" />
+
+    <!-- user defined js -->
+    <script type="text/javascript" src="js/adminDashboard.js"></script>
+    <script type="text/javascript" src="components/appFooter/appFooter.module.js"></script>
+    <script type="text/javascript" src="components/appFooter/appFooter.component.js"></script>
+
+    <!-- user defined css -->
+    <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="css/main.css" />
+
     <script>
         $(document).ready(function() {
             $('.item').on('click', function() {
                 $('.item').removeClass('active');
                 $(this).addClass('active');
             })
-
         });
     </script>
 </head>
@@ -64,40 +70,7 @@
     </div>
 
     <!--Footer-->
-    <div class="ui fluid container custom-footer">
-        <div class="ui center aligned container">
-            <div class="ui stackable inverted divided grid">
-                <div class="three wide column">
-                    <h4 class="ui inverted header">Contact</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">Contact Admin</a>
-                        <a href="#" class="item">Contact Developers</a>
-                    </div>
-                </div>
-                <div class="three wide column">
-                    <h4 class="ui inverted header">Developers</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">Suggest something.</a>
-                        <a href="#" class="item">Report bugs</a>
-                    </div>
-                </div>
-                <div class="three wide column">
-                    <h4 class="ui inverted header">Comapany</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">How It Works!</a>
-                        <a href="#" class="item">About US</a>
-                    </div>
-                </div>
-                <div class="seven wide column">
-                    <h4 class="ui inverted header">Placementcell.com</h4>
-                    <p>Hiring platform for freshers</p>
-                </div>
-            </div>
-            <div class="ui inverted section divider"></div>
-            <p>All Rights Reserved &copy; 2016
-                <strong><a href="#">Placementcell Inc.</a></strong> | Made with <i class="icon small inverted heart"></i> in Banglore.
-
-        </div>
+    <app-footer></app-footer>
 </body>
 
 </html>
