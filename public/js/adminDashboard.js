@@ -25,11 +25,13 @@ adminDashboard.controller('noticeBoard' , function($scope) {
 //page Routing
 adminDashboard.config(function($routeProvider) {
     $routeProvider
-        .when("/noticeBoard", {
-            templateUrl: "noticeBoard.html",
-            activetab: 'active'
+        .when("/noticeBoard/createNotice", {
+            template: "<create-notice></create-notice>"
+        })
+        .when("/noticeBoard/viewNotice", {
+            template: "<view-notices></view-notices>"
         })
         .otherwise({
-          redirectTo:'/noticeBoard'
+          redirectTo:'/noticeBoard/createNotice'
         });
 });
