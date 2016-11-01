@@ -10,8 +10,15 @@ var adminDashboard = angular.module('adminDashboard',[
 adminDashboard.controller('sidebar', function($scope) {
   $scope.pageList = [{
       pageName: 'Notice Board',
-      link: 'noticeBoard',
-      icon : 'alarm outline'
+      link: '/#/noticeBoard/createNotice',
+      icon : 'alarm outline',
+      sublist: [{
+        pageName:'Create',
+        link: '/#/noticeBoard/createNotice'
+      },{
+        pageName:'Show',
+        link:'/#/noticeBoard/showNotice'
+      }]
   }];
 });
 //end of index page config
