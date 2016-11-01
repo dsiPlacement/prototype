@@ -20,6 +20,8 @@
     <script type="text/javascript" src="js/adminDashboard.js"></script>
     <script type="text/javascript" src="components/appFooter/appFooter.module.js"></script>
     <script type="text/javascript" src="components/appFooter/appFooter.component.js"></script>
+    <script type="text/javascript" src="components/appHeader/appHeader.module.js"></script>
+    <script type="text/javascript" src="components/appHeader/appHeader.component.js"></script>
 
     <!-- user defined css -->
     <link rel="stylesheet" href="css/dashboard.css" />
@@ -36,24 +38,15 @@
 </head>
 
 <body ng-app="adminDashboard">
-    <div class="ui green borderless main fixed top menu">
-        <div class="ui fluid container">
-            <div class="header brand item">
-                <h3>Placementcell</h3>
-            </div>
-            <a class="item">About</a>
-            <div class="right menu">
-                <div class="item" style="font-size:10px">
-                    <button class="ui red basic button"><i class="icon power"></i>Logout</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--header end-->
 
-    <!--Sidebar Menu-->
+    <!--header-->
+    <app-header></app-header>
+
+    <!--body-->
     <div class="ui fluid container main-body">
         <div class="ui grid">
+
+            <!--Sidebar Menu-->
             <div class="three wide column">
                 <div class="custom-sidebar ui red vertical tabular menu" ng-controller="sidebar">
                     <div ng-repeat="page in pageList">
@@ -71,7 +64,7 @@
         </div>
     </div>
 
-    <!--Footer-->
+    <!--footer-->
     <app-footer></app-footer>
 </body>
 

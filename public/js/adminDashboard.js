@@ -1,12 +1,16 @@
 //start of Index page config
-var adminDashboard = angular
-    .module('adminDashboard', ['ngRoute','appFooter']);
-    adminDashboard.controller('sidebar', function($scope) {
-    $scope.pageList = [{
-        pageName: 'Notice Board',
-        link: 'noticeBoard',
-        icon : 'alarm outline'
-    }];
+var adminDashboard = angular.module('adminDashboard',[
+                                                        'ngRoute',
+                                                        'appFooter',
+                                                        'appHeader'
+                                                      ]);
+
+adminDashboard.controller('sidebar', function($scope) {
+  $scope.pageList = [{
+      pageName: 'Notice Board',
+      link: 'noticeBoard',
+      icon : 'alarm outline'
+  }];
 });
 //end of index page config
 
