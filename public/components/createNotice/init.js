@@ -14,10 +14,11 @@ function initEditor(){
       content_css: ['//fonts.googleapis.com/css?family=Lato:300,300i,400,400i', '//www.tinymce.com/css/codepen.min.css']
   });
 }
+initEditor();
 $(document).ready(function() {
     $('select.dropdown').dropdown();
-    $('#showCreateNotice').on('click', function() {
-        $('#createNotice').modal('show');
-        initEditor();
-    });
+    // $('#showCreateNotice').on('click', function() {
+    //     $('#createNotice').modal('show');
+    //
+    // });
 });

@@ -42,9 +42,12 @@
 
             <!--Sidebar Menu-->
             <div class="three wide column">
-                <div class="custom-sidebar ui red vertical tabular menu" ng-controller="sidebar">
+                <div class=" ui red vertical pointy menu" ng-controller="sidebar">
                     <div ng-repeat="page in pageList">
-                        <a class="item {{page.status}}" href="#{{page.link}}"><i class="{{page.icon}} icon"></i>{{ page.pageName }}</a>
+                        <a class="item" href="/#{{page.link}}"><i class="{{page.icon}} icon"></i>{{ page.pageName }}</a>
+                            <div class="menu" ng-repeat="subPage in page.subList">
+                              <a class="item" href="/#{{subPage.link}}">{{subPage.subPageName}}</a>
+                            </div>
                     </div>
                 </div>
             </div>
