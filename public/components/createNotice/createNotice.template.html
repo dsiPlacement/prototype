@@ -1,84 +1,70 @@
-<div class="ui segment">
-  <h3>Create a new notice</h3>
 
-  <button id="showCreateNotice" class="ui center aligned wide large green inverted button">
-      Create >>
-  </button>
-
-  <script type="text/javascript" src="components/createNotice/init.js"></script>
-
-  <div class="ui modal" id="createNotice">
+<script type="text/javascript" src="components/createNotice/init.js"></script>
+<div class="ui container new-notice">
     <div class="header">
         <h2 style="color:teal;">Post a Notice</h2>
     </div>
-    <div class="ui container new-notice">
-
-        <form class="ui form" action="#" method="POST">
-            <div class="field">
-                <div class="ui labeled input">
-                    <div class="ui label">
-                        <h4>Title</h4>
-                    </div>
-                    <input type="text" name="title" placeholder="Enter title of notice" required="required">
+    <form class="ui form" action="#" method="POST">
+        <div class="field">
+            <div class="ui labeled input">
+                <div class="ui label">
+                    <h4>Title</h4>
                 </div>
+                <input type="text" name="title" placeholder="Enter title of notice" required="required">
             </div>
-            <div class="field">
-                <h4>Message Content</h4>
-                <textarea id="message" name="content" rows="8" cols="40" placeholder="Enter content here"></textarea>
-            </div>
-            <div class="content">
-              <div class="ui grid">
-                  <div class="four wide column">
+        </div>
+        <div class="field">
+            <h4>Message Content</h4>
+            <textarea id="message" name="content" rows="8" cols="40" placeholder="Enter content here"></textarea>
+        </div>
+        <div class="content">
+            <div class="ui grid">
+                <div class="four wide column">
                     <div class="ui label">
                         <h3>Filter:</h3>
                     </div>
-                  </div>
-                  <div class="four wide column">
-                      <select class="ui fluid search dropdown" multiple="">
-                          <option value="">Branch</option>
-                          <option value="be">BTech</option>
-                          <option value="mca">MCA</option>
-                          <option value="mtech">MTech</option>
-                      </select>
-                  </div>
+                </div>
+                <div class="four wide column">
+                    <select class="ui fluid search dropdown" multiple="">
+                        <option value="">Branch</option>
+                        <option value="be">BTech</option>
+                        <option value="mca">MCA</option>
+                        <option value="mtech">MTech</option>
+                    </select>
+                </div>
 
-                  <div class="four wide column">
-                      <select class="ui fluid search dropdown" multiple="">
-                          <option value="">Department</option>
-                          <option value="cse">CSE</option>
-                          <option value="ece">ECE</option>
-                          <option value="mech">mech</option>
-                      </select>
-                  </div>
+                <div class="four wide column">
+                    <select class="ui fluid search dropdown" multiple="">
+                        <option value="">Department</option>
+                        <option value="cse">CSE</option>
+                        <option value="ece">ECE</option>
+                        <option value="mech">mech</option>
+                    </select>
+                </div>
 
-                  <div class="four wide column">
-                      <select class="ui fluid search dropdown" multiple="">
-                          <option value="">Year</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                      </select>
-                  </div>
-              </div>
-              <div class="ui divider"></div>
-
-            </div>
-            <div class="actions">
-                <div >
-                    <div class="ui cancel red inverted button">
-                        <i class="remove icon"></i>
-                        Cancel
-                    </div>
-                    <button type="submit" class="ui green inverted button">
-                        <i class="checkmark icon"></i>
-                        Submit
-                    </button>
+                <div class="four wide column">
+                    <select class="ui fluid search dropdown" multiple="">
+                        <option value="">Year</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
                 </div>
             </div>
-        </form>
-    </div>
-    <div style="overflow-y:scroll">
-    </div>
-  </div>
+            <div class="ui divider"></div>
 
+        </div>
+        <div class="actions">
+            <div >
+                <div class="ui cancel red inverted button">
+                    <i class="remove icon"></i>
+                    Cancel
+                </div>
+                <button type="submit" class="ui green inverted button">
+                    <i class="checkmark icon"></i>
+                    Submit
+                </button>
+            </div>
+        </div>
+    </form>
 </div>
