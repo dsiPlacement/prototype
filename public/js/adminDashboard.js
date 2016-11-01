@@ -1,9 +1,11 @@
 //start of Index page config
 var adminDashboard = angular.module('adminDashboard',[
-                                                        'ngRoute',
-                                                        'appFooter',
-                                                        'appHeader'
-                                                      ]);
+  'ngRoute',
+  'appFooter',
+  'appHeader',
+  'createNotice',
+  'viewNotices'
+]);
 
 adminDashboard.controller('sidebar', function($scope) {
   $scope.pageList = [{
